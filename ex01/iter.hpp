@@ -6,7 +6,7 @@
 /*   By: ogorfti <ogorfti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:48:02 by ogorfti           #+#    #+#             */
-/*   Updated: 2023/10/27 12:28:16 by ogorfti          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:21:46 by ogorfti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include <iostream>
 
-void fun(void *data)
+template <typename T>
+void fun(T* data)
 {
-	(void)data;
-	std::cout << "funcPtr called!" << '\n';
+	std::cout << *data << '\n';
 }
 
-template <typename addr, typename length, typename func>
-void iter(addr add, length len, func (*fun)(void *))
+template <typename T>
+void iter(T& add, int len, void (*fun)(T))
 {
 	for (int i = 0; i < len; i++)
 		fun(&add[i]);
