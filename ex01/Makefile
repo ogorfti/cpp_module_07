@@ -6,7 +6,7 @@
 #    By: ogorfti <ogorfti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/27 11:05:58 by ogorfti           #+#    #+#              #
-#    Updated: 2023/10/27 11:18:41 by ogorfti          ###   ########.fr        #
+#    Updated: 2023/10/28 12:08:36 by ogorfti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = $(wildcard *.cpp)
 
 OBJ_DIR = ../obj
 
-OBJS_PATH = ../obj/ex02
+OBJS_PATH = ../obj/ex01
 
 OBJS = $(addprefix $(OBJS_PATH)/, $(SRCS:.cpp=.o))
 
